@@ -248,8 +248,8 @@ class ModuleAPI(object):
         :return: Stderr if command failed
         :rtype: str
         """
-        if await self.module_system() == 'tmod':
-            return 'subcommand reset does not exist in environment modules (tmod)'
+        # if await self.module_system() == 'tmod':
+        #     return 'subcommand reset does not exist in environment modules (tmod)'
         output = await module("reset")
         self.invalidate_module_caches()
         return output
